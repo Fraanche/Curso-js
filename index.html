@@ -1,17 +1,38 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Simulador de Compra de Miel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de compra de miel</title>
+    <link rel="stylesheet" href="css/estilos.css" />
   </head>
   <body>
-    <h1>Simulador de Compra de Miel</h1>
-    <p>
-      Este simulador es para un emprendimiento familiar de venta de miel
-      artesanal. Al finaliar este curso me gustaria contar con un buen sistema
-      de compra el cual pueda enlazar a la pagina del emprendimiento la cual
-      realice con el curso anterior.
-    </p>
+    <div class="contenedor">
+      <h1>Simulador de compra Apiarios El Toti</h1>
+
+      <form id="formulario-compra">
+        <label for="tamaño">Tamaño de pote:</label>
+        <select id="tamaño" required>
+          <option value="">Seleccione un tamaño</option>
+          <option value="1/4">1/4 kilo ($2500)</option>
+          <option value="1/2">1/2 kilo ($4800)</option>
+          <option value="1">1 kilo ($9400)</option>
+          <option value="2">2 kilos ($18200)</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" min="1" required />
+
+        <button type="submit">Agregar al carrito</button>
+      </form>
+
+      <h2>Carrito</h2>
+      <ul id="carrito-lista"></ul>
+      <p id="total"></p>
+      <button id="vaciar-carrito">Vaciar carrito</button>
+    </div>
+
     <script src="js/simulador.js"></script>
   </body>
 </html>
